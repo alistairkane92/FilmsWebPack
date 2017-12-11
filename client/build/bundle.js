@@ -132,7 +132,9 @@ window.addEventListener('load', app);
 var Film = function(options){
   this.title = options.title;
   this.actors = options.actors;
+  this.genre = options.genre;
   this.reviews = options.reviews || [];
+
 }
 
 Film.prototype = {
@@ -167,12 +169,14 @@ var Films = function(){
 
   var film1 = new Film({
     title: "Now You See Me",
-    actors: ["Woody Harrelson", "Jesse Eisenberg"]
+    actors: ["Woody Harrelson", "Jesse Eisenberg"],
+    genre: "Load-a-pish"
   });
 
   var film2 = new Film({
     title: "Star Wars Episode IV: A New Hope",
-    actors: ["Harrison Ford", "Alec Guiness"]
+    actors: ["Harrison Ford", "Alec Guiness"],
+    genre: "Sci-Fi"
   });
 
   film1.addReview(review1);
