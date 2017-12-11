@@ -11,15 +11,13 @@ filmRouter.get('/', function(req, res){
 });
 
 filmRouter.get('/all', function(req, res){
-    var titles = []
     films.forEach(function(film){titles.push(film.title)})
     res.json({titles});
 });
 
-
-// filmRouter.get("/:id", function(req, res){
-//     res.json({data: films[req.params.id]});
-// });
+filmRouter.get("/:id", function(req, res){
+    res.json({data: films[req.params.id]});
+});
 
 // filmRouter.post('/', function(req, res){
 //     films.push(req.body.film);
