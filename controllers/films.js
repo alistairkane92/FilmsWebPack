@@ -24,12 +24,11 @@ filmRouter.post('/', function(req, res){
     res.json({films});
 });
 
-//
-// filmRouter.put("/:id", function(req, res){
-//     films[req.params.id] = req.body.film;
-//     res.json({films});
-// });
-//
+filmRouter.put("/:id", function(req, res){
+    films[req.params.id] = req.body.film;
+    res.json({films});
+});
+
 // filmRouter.delete("/:id", function(req, res){
 //     films.splice(req.params.id, 1);
 //     res.json({films});
