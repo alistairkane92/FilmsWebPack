@@ -10,14 +10,23 @@ filmRouter.get('/', function(req, res){
     res.json({films});
 });
 
-filmRouter.post('/', function(req, res){
-    films.push(req.body.film);
-    res.json({films});
+filmRouter.get('/all', function(req, res){
+    var titles = []
+    films.forEach(function(film){titles.push(film.title)})
+    res.json({titles});
 });
-//
+
+
 // filmRouter.get("/:id", function(req, res){
 //     res.json({data: films[req.params.id]});
 // });
+
+// filmRouter.post('/', function(req, res){
+//     films.push(req.body.film);
+//     res.json({films});
+// });
+//
+
 //
 // filmRouter.put("/:id", function(req, res){
 //     films[req.params.id] = req.body.film;
