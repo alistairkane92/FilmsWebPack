@@ -29,9 +29,9 @@ filmRouter.put("/:id", function(req, res){
     res.json({films});
 });
 
-// filmRouter.delete("/:id", function(req, res){
-//     films.splice(req.params.id, 1);
-//     res.json({films});
-// })
+filmRouter.delete("/:id", function(req, res){
+    films.splice(req.params.id, 1);
+    res.json({films});
+})
 
 module.exports = filmRouter;
