@@ -19,11 +19,10 @@ filmRouter.get("/:id", function(req, res){
     res.json({data: films[req.params.id]});
 });
 
-// filmRouter.post('/', function(req, res){
-//     films.push(req.body.film);
-//     res.json({films});
-// });
-//
+filmRouter.post('/', function(req, res){
+    films.push(req.body.film);
+    res.json({films});
+});
 
 //
 // filmRouter.put("/:id", function(req, res){
